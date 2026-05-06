@@ -1,0 +1,63 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg: #e4e6ec;
+  --surface: #f9f9fb;
+  --surface-2: #ffffff;
+  --text: #1f2025;
+  --text-muted: #4d505c;
+  --primary: #2c46b1;
+  --primary-strong: #22388f;
+  --danger: #b12c4d;
+  --border: #cdcfd5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #f6f7fb 0%, var(--bg) 45%, #d8dce5 100%);
+  color: var(--text);
+}
+
+a { color: inherit; }
+
+
+.links-scroll {
+  scrollbar-color: var(--primary) #d9dce4;
+  scrollbar-width: thin;
+}
+
+.links-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.links-scroll::-webkit-scrollbar-track {
+  background: #d9dce4;
+  border-radius: 999px;
+}
+
+.links-scroll::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+.links-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-strong);
+}
+
+.loading-topbar {
+  animation: loading-topbar-slide 1.2s linear infinite;
+}
+
+@keyframes loading-topbar-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
